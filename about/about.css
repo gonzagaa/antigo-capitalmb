@@ -1,0 +1,92 @@
+nav {
+    backdrop-filter: blur(10px) saturate(100%);
+    -webkit-backdrop-filter: blur(10px) saturate(100%);
+    background-color: rgba(0, 0, 0, 0.700);
+  }
+
+body {
+    height: 100%;
+    background-image: url(../assets/background\ more.jpg);
+    background-size: cover;
+}
+
+#about .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+#about .historia,
+#about .proposito {
+    text-align: left;
+
+    /* From https://css.glass */
+    background: rgba(17, 17, 17, 0.67);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(158, 158, 158, 0.3);
+
+    padding: 3rem;
+
+    box-shadow: 3px 6px 30px #000000;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d8d8d8;
+
+    margin-bottom: 2rem;
+}
+
+#about h2 span {
+    background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#about p {
+    font-size: 1.4rem;
+    color: #d8d8d8;
+    font-weight: 500;
+}
+
+#about p span {
+    background: #004BFE;
+    background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+#about p strong {
+    font-weight: 800;
+}
+
+#about .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .image img {
+    max-width: 100%;
+}
+
+@media (min-width: 1080px) {
+    section#about h2 {
+        font-size: 5rem;
+    }
+
+    section#about p {
+        font-size: 2rem;
+    }
+
+    section#about .image img {
+        max-width: 70%;
+    }
+}

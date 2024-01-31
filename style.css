@@ -1,0 +1,1213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --nav-height: 7.2rem;
+
+  --blue-one: #004BFE;
+  --blue-two: #000098;
+  --blue-three: #00004E;
+}  
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  ul {
+    list-style: none;
+  }
+
+  .wrapper {
+    width: min(50rem, 100%);
+    margin-inline: auto;
+  
+    padding-inline: 2.4rem;
+  }
+
+  .wrapper-desktop {
+    width: min(180rem, 100%);
+    margin-inline: auto;
+  
+    padding-inline: 2.4rem;
+  }
+  
+  section {
+    padding-block: 10rem;
+  }
+
+/* HOME =================== */
+#home {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+
+  background-color: #222222;
+}
+
+#home .wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-top: var(--nav-height);
+}
+
+#home:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url(./assets/background\ \(4\).jpg);
+  background-position-y: center;
+  background-size: cover;
+  background-color: #111111;
+  border-radius: 0% 0% 50% 50%/0% 0% 60% 60%;
+  transform: scaleX(1.5);
+
+  box-shadow: 0px 7px 30px #242424;
+}
+
+@keyframes moveline {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#home .box {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+#home .box img {
+  width: 40%;
+  filter: drop-shadow(3px 8px 0px #414141d5);
+  animation: move 1.5s infinite ease-in-out;
+}
+
+#home .content button {
+  background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+  border: none;
+  padding: 1rem 2rem;
+  color: #111111;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  border-radius: 2rem;
+
+  box-shadow: 4px 8px 20px #000000;
+
+  transition: all 200ms ease-in-out;
+
+  margin-top: 2rem;
+}
+
+#home .content button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#home .content h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+#home .content h1 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+  font-weight: 700;
+}
+
+/* more =================== */
+#more {
+  background-color: #222222;
+}
+
+#more .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#more h2 {
+  font-size: 4rem;
+  color: #d8d8d8;
+  font-weight: 800;
+
+  text-shadow: 2px 4px 20px #11111131;
+  margin-bottom: 5rem;
+}
+
+#more h2 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#more .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+}
+
+#more .cards .card {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #111111;
+  gap: 1rem;
+
+  background-color: #303030;
+  padding: 3rem;
+  border-radius: 2rem;
+
+  box-shadow: 0px 0px 10px #000000b0;
+}
+
+#more .cards .card .number span {
+  font-size: 5rem;
+  background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+  color: #242424;
+  padding: 1rem;
+  border-radius: 15% 85% 51% 49% / 61% 48% 52% 39% ;
+}
+
+#more .cards .card .text {
+  margin-top: 1rem;
+}
+
+#more .cards .card .text h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #d8d8d8;
+}
+
+#more .cards .card:nth-child(1) .text h3 {
+  margin-bottom: 3rem;
+}
+
+#more .cards .card .text h3 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #1111fd 50%, #1010c9 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+#more .cards .card .text p {
+  font-weight: 500;
+  color: #999999;
+}
+
+#more .cards svg {
+  fill: var(--blue-one);
+}
+/* responsive tables =================== */
+
+/* planos =================== */
+.planos {
+  background-color: #111111;
+  position: relative;
+}
+
+.planos::after {
+  content: '';
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.planos::before {
+  content: "EM BREVE...";
+  color: #d8d8d8;
+  position: absolute;
+  z-index: 4;
+  font-size: 4rem;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%)
+}
+
+.planos h2 {
+  font-size: 4rem;
+  color: #d8d8d8;
+  font-weight: 800;
+
+  text-shadow: 2px 4px 20px #11111131;
+  margin-bottom: 5rem;
+}
+
+.planos h2 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.planos .swiper-slide,
+#planosb3 .swiper-slide {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  border-radius: 3rem;
+}
+
+.planos .swiper-slide h3,
+#planosb3 .swiper-slide h3 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #d8d8d8;
+}
+
+.planos .swiper-slide p,
+#planosb3 .swiper-slide p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #d8d8d8;
+}
+
+.planos .swiper-slide span,
+#planosb3 .swiper-slide span {
+  font-weight: 700;
+}
+
+.planos .swiper-slide a button,
+#planosb3 .swiper-slide a button,
+#planosb3Desktop .card a button {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  border: none;
+  box-shadow: 4px 8px 20px #000000;
+
+  transition: all 200ms ease-in-out;
+
+  color: #111111;
+}
+
+.planos .swiper-slide a button:hover,
+#planosb3 .swiper-slide a button:hover,
+#planosb3Desktop .card a button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.planos .swiper-slide.one { 
+  background: rgb(131,58,180);
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(0,0,0,0.8015581232492998) 25%, rgba(0,0,0,0.8) 75%, rgba(192,69,252,1) 100%);
+  box-shadow: 0px 0px 20px 1px rgba(131,58,180,1) inset;
+}
+
+.planos .swiper-slide.one span {
+  background: #B624FF;
+  background: linear-gradient(to right, #B624FF 0%, #A033FF 33%, #C165CF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.planos .swiper-slide.one a button {
+  background: linear-gradient(to right, #B624FF 0%, #A033FF 33%, #C165CF 100%);
+}
+
+.planos .swiper-slide.two {
+  background: rgb(71,180,58);
+  background: linear-gradient(45deg, rgba(71,180,58,1) 0%, rgba(0,0,0,0.8015581232492998) 25%, rgba(0,0,0,0.8) 75%, rgba(69,252,69,1) 100%);
+  box-shadow: 0px 0px 20px 1px rgba(71,180,58,1) inset;
+}
+
+.planos .swiper-slide.two span {
+  background: #5BFF29;
+  background: linear-gradient(to right, #5BFF29 0%, #42FF75 33%, #3FCF3A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.planos .swiper-slide.two a button {
+  background: linear-gradient(to right, #5BFF29 0%, #42FF75 33%, #3FCF3A 100%);
+}
+
+.planos .swiper-slide.three {
+  background: rgb(58,169,180);
+  background: linear-gradient(45deg, rgba(58,169,180,1) 0%, rgba(0,0,0,0.8015581232492998) 25%, rgba(0,0,0,0.8) 75%, rgba(58,169,180,1) 100%);
+  box-shadow: 0px 0px 20px 1px rgba(58,169,180,1) inset;
+}
+
+.planos .swiper-slide.three span {
+  background: #14FFE8;
+  background: linear-gradient(to right, #14FFE8 0%, #30C8FF 33%, #38C0CF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.planos .swiper-slide.three a button {
+  background: linear-gradient(to right, #14FFE8 0%, #30C8FF 33%, #38C0CF 100%);
+}
+
+.planos .swiper-slide.for {
+  background: rgb(212,148,36);
+background: linear-gradient(45deg, rgba(212,148,36,1) 0%, rgba(0,0,0,0.8015581232492998) 25%, rgba(0,0,0,0.8) 75%, rgba(212,148,36,1) 100%);
+  box-shadow: 0px 0px 20px 1px rgba(212,148,36,1) inset;
+}
+
+.planos .swiper-slide.for span {
+  background: #FFAA00;
+background: linear-gradient(to right, #FFAA00 0%, #FFDD03 33%, #CF9100 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.planos .swiper-slide.for a button {
+  background: linear-gradient(to right, #FFAA00 0%, #FFDD03 33%, #CF9100 100%);
+}
+
+.planos .table,
+#table .table,
+#tableprofit .table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10rem;
+  overflow-x: auto;
+}
+
+.planos table,
+#table table,
+#tableprofit table {
+  border-collapse: collapse;
+
+  display: block;
+ max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.planos table th {
+  color: #111111;
+}
+
+.planos table td,
+.planos table th,
+#table table td,
+#table table th,
+#tableprofit table td,
+#tableprofit table th {
+  border: 1px solid #000;
+  padding: 1rem;
+}
+
+.planos table th,
+.planos tfoot {
+  background-color: var(--blue-two);
+}
+
+.planos tbody tr td {
+  background-color: #343434;
+  color: #a7a7a7;
+  font-weight: 500;
+}
+
+.planos tbody tr.zebra td {
+  background-color: #636363;
+  color: #d8d8d8;
+}
+
+.planos tfoot th {
+  background-color: #00ce5d25;
+  border: none;
+}
+
+.planos tfoot td a {
+  text-decoration: none;
+  color: #111111;
+}
+
+.planos tfoot td {
+  transition: all 200ms ease-in-out;
+}
+
+.planos tfoot td:hover {
+  cursor: pointer;
+  background-color: #00ce5d;
+}
+
+.planos.desktop {
+  display: none;
+}
+
+/* table evolução da performance =================== */
+#table {
+  background-color: #111111;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23141414' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+}
+
+#table h2 {
+  font-size: 4rem;
+  color: #d8d8d8;
+  font-weight: 800;
+
+  text-shadow: 2px 4px 20px #11111131;
+  margin-bottom: 5rem;
+}
+
+#table h2 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#table thead th,
+#table tbody th,
+#tableprofit theader th,
+#tableprofit tbody th {
+  background-color: var(--blue-two);
+}
+
+#table thead td,
+#tableprofit thead td {
+  border: none;
+  background-color: #0026ffaf;
+}
+
+#table tbody tr td,
+#tableprofit tbody tr td {
+  background-color: #111111;
+  color: #838383;
+  font-weight: 500;
+}
+
+#table tbody tr.zebra td,
+#tableprofit tbody tr.zebra td {
+  background-color: #303030;
+  font-weight: 500;
+  color: #a5a5a5;
+}
+
+/* planos b3 =================== */
+#planosb3 {
+  background-color: #111111;
+}
+
+#planosb3Desktop {
+  display: none;
+}
+
+#planosb3 h2 {
+  font-size: 4rem;
+  color: #d8d8d8;
+  font-weight: 800;
+
+  text-shadow: 2px 4px 20px #11111131;
+  margin-bottom: 5rem;
+}
+
+#planosb3 h2 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#planosb3 .swiper-slide.one {
+  background: rgb(48,241,255);
+  background: linear-gradient(319deg, rgba(48,241,255,1) 0%, rgba(0,0,0,0.8015581232492998) 25%, rgba(0,0,0,0.8) 75%, rgba(48,241,255,1) 100%);
+  box-shadow: 0px 0px 20px 1px rgba(48,241,255,1)  inset;
+}
+
+#planosb3 .swiper-slide.one span {
+  background: #30F1FF;
+  background: linear-gradient(to right, #30F1FF 0%, #38FFF2 33%, #21BECF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#planosb3 .swiper-slide.one a button {
+  background: linear-gradient(to right, #30F1FF 0%, #38FFF2 33%, #21BECF 100%);
+}
+
+#planosb3 .swiper-slide.two {
+  background: rgb(112,255,155);
+  background: linear-gradient(319deg, rgba(112,255,155,1) 0%, rgba(0,0,0,0.8015581232492998) 25%, rgba(0,0,0,0.8) 75%, rgba(112,255,155,1) 100%);
+  box-shadow: 0px 0px 20px 1px rgba(112,255,155,1) inset;
+}
+
+#planosb3 .swiper-slide.two span {
+  background: #70FF9B;
+  background: linear-gradient(to right, #70FF9B 0%, #54FF76 33%, #46CF78 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#planosb3 .swiper-slide.two a button {
+  background: linear-gradient(to right, #70FF9B 0%, #54FF76 33%, #46CF78 100%);
+}
+
+/* table profit =================== */
+#tableprofit {
+  background-color: #111111;
+}
+
+#tableprofit th, 
+#tableprofit td {
+  font-size: 1.3rem;
+}
+
+#tableprofit .buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#tableprofit .buttons button {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  color: #e9e9e9;
+  border: none;
+  box-shadow: 2px 4px 30px #000000;
+  border-radius: 1rem;
+  font-weight: 500;
+
+  transition: all 200ms ease-in-out;
+}
+
+#tableprofit .buttons button:hover {
+  cursor: pointer;
+}
+
+#tableprofit .buttons button.ocult {
+  background-color: #4949498e;
+  transform: scale(.9);
+  color: #e9e9e993;
+}
+
+#tableprofit .buttons button span {
+  font-weight: 800;
+
+  background: #FCFCFC;
+  background: linear-gradient(to right, #FCFCFC 0%, #DEDEDE 33%, #EDEDED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#tableprofit .table table thead th {
+  background-color: var(--blue-two);
+}
+
+#tableprofit .table table tfoot th {
+  background-color: var(--blue-two);
+}
+
+#tableprofit .table table tfoot td {
+  background-color: var(--blue-two);
+  font-weight: 500;
+  font-size: 1.6;
+}
+
+#tableprofit .table table tfoot th {
+  transition: all 200ms ease-in-out;
+}
+
+#tableprofit .table table tfoot th:hover {
+  background-color: #0028ac;
+  cursor: pointer;
+}
+
+#tableprofit .table table tfoot a {
+  text-decoration: none;
+  color: #111111;
+}
+
+#tableprofit .table.ocult {
+ display: none;
+}
+
+/* benefit =================== */
+#benefit {
+  background-image: url(./assets/background\ benefit.jpg);
+  background-size: cover;
+}
+
+#benefit h2 {
+  font-size: 4rem;
+  color: #d8d8d8;
+  font-weight: 800;
+
+  text-shadow: 2px 4px 20px #11111131;
+  margin-bottom: 5rem;
+}
+
+#benefit h2 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#benefit .cards .card {
+  text-align: left;
+
+  background: rgba(41, 41, 41, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.3px);
+  -webkit-backdrop-filter: blur(3.3px);
+  border: 1px solid var(--blue-two);
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+#benefit .cards .card svg {
+  fill: var(--blue-one);
+}
+
+#benefit .cards .card h3 {
+  color: #d8d8d8;
+  font-size: 2.3rem;
+}
+
+#benefit .cards .card h3 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#benefit .cards .card p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #a3a3a3;
+}
+
+#benefit .cards .card svg {
+  animation: move 1.5s infinite ease-in-out;
+}
+/* testimonials =================== */
+#testimonials {
+  background-color: #111111;
+}
+
+#testimonials h2 {
+  font-size: 4rem;
+  color: #d8d8d8;
+  font-weight: 800;
+
+  text-shadow: 2px 4px 20px #11111131;
+  margin-bottom: 5rem;
+}
+
+#testimonials h2 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#testimonials .mySwiperTestimonials {
+  padding-inline: 2rem;
+}
+
+#testimonials .testimonial {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 2rem;
+}
+
+#testimonials blockquote {
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+#testimonials blockquote p span {
+  color: var(--blue-one);
+  font: 700 3rem serif;
+}
+
+#testimonials blockquote p {
+  color: #d8d8d8;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+#testimonials cite {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8;
+  color: #d8d8d8;
+  font-weight: 700;
+}
+
+#testimonials cite img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#testimonials blockquote {
+  background-color: #343434;
+  border: 2rem;
+}
+
+/* FAQ =================== */
+
+.faq {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(17%2c 17%2c 17%2c 1)'%3e%3c/rect%3e%3cpath d='M280 50.91C242.82 50.91 204.63 88.01 196 140C185.61 202.56 224.14 208.72 241.96 280C259.14 348.72 248.97 353.32 266 420C267.99 427.81 273.21 428.97 280 428.97C285.95 428.97 286.33 425.14 291.48 420C356.33 355.32 353.61 351.6 420 289.33C428.24 281.6 440.74 285.68 440.74 280C440.74 273.65 427.68 275.28 420 265.26C374.04 205.28 375.06 203.7 333.45 140C305.06 96.53 311.55 50.91 280 50.91' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M700 90.59C685.85 90.59 672.31 116.8 672.31 140C672.31 157.06 685.94 171.11 700 171.11C714.43 171.11 729.3 157.17 729.3 140C729.3 116.91 714.35 90.59 700 90.59' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M140 43.75C76.66 67.74 47.4 82.55 0 67.74C-22.6 60.68 -22.83 11.04 0 0C47.17 -22.83 70 0 140 0C159.44 0 178.89 -8.73 178.89 0C178.89 13.14 166.1 33.87 140 43.75' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M397.09 140C356.28 70.77 310.91 42.82 317.92 0C322.37 -27.18 368.96 0 420 0C450.63 0 455.29 -12.56 481.25 0C525.29 21.31 521.75 32.65 560 67.74C598.05 102.65 598.19 102.66 633.85 140C668.19 175.95 666.4 214.32 700 214.32C734.48 214.32 770 181.03 770 140C770 84.85 737.29 79.24 700 21.96C691.72 9.24 678.87 6.48 678.87 0C678.87 -4.5 689.43 0 700 0C770 0 770 0 840 0C846.37 0 849.1 -4.98 852.73 0C900.11 65.02 897.81 69.73 942.03 140C961.44 170.84 949.71 188.48 980 202.22C1038.69 228.84 1057.1 236.96 1120 220.71C1177.54 205.85 1174.77 184.47 1220.88 140C1244.77 116.97 1233.4 85.71 1260 85.71C1310.79 85.71 1326.08 104.25 1375.65 140C1396.08 154.73 1377.56 179.6 1400 186.67C1459.73 205.47 1497.06 163.11 1540 191.74C1567.06 209.78 1540 235.87 1540 280C1540 350 1540 350 1540 420C1540 490 1566.85 516.85 1540 560C1523.29 586.85 1493.24 570.39 1452.89 560C1423.24 552.36 1427.66 523.94 1400 523.94C1365.16 523.94 1365.89 550.21 1327.88 560C1295.89 568.24 1293.94 560 1260 560C1239.26 560 1218.52 574.95 1218.52 560C1218.52 512.73 1239.14 497.74 1260 435.56C1262.62 427.74 1263.52 428.01 1265.49 420C1282.61 350.23 1300.3 341.33 1298.18 280C1297.55 261.79 1276.17 260.91 1260 260.91C1251.7 260.91 1258.47 274.53 1249.23 280C1188.47 315.97 1177.46 302.63 1120 343.8C1079.77 372.63 1076.41 375.99 1053.85 420C1020.99 484.09 1039.98 501.59 1009.17 560C1003.05 571.59 994.59 560 980 560C967.5 560 963.58 568.4 955 560C893.58 499.89 900.27 486.66 840 422.98C834.02 416.66 831.24 421.55 822.5 420C761.24 409.17 757.96 398.22 700 398.22C685.32 398.22 689.82 410.59 677.21 420C619.82 462.79 617.89 460.34 560 502.62C522.05 530.34 526.78 543.09 485.53 560C456.78 571.78 452.76 560 420 560C350 560 350 560 280 560C239.02 560 228.65 579.26 198.05 560C158.65 535.19 169.67 471.85 140 471.85C109.73 471.85 118.73 534.47 78.18 560C48.73 578.54 16.96 582.13 0 560C-22.13 531.12 -18.15 498.8 0 457.97C12.96 428.8 51.33 450.47 62.22 420C83.15 361.48 43.82 343.95 63.64 280C82.71 218.48 104.05 169.06 140 169.06C174.18 169.06 190.55 220.12 203.91 280C218.55 345.59 173.77 363.37 196 420C211.82 460.3 239.26 473.85 280 473.85C315.69 473.85 316.45 449.2 348.85 420C386.45 386.11 377.81 374.17 420 347.67C483.39 307.86 491.09 319.09 560 287.37C564.59 285.25 567 283.45 567 280C567 276.96 563.63 277.04 560 274.4C490.13 223.62 486.05 227.65 420 173.16C404.59 160.45 407.32 157.35 397.09 140' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1540 83.33C1525.62 83.33 1486.97 27.11 1486.97 0C1486.97 -14.56 1529.69 -16.2 1540 0C1556.2 25.46 1552.13 83.33 1540 83.33' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M70 0C70 7.85 25.09 30.11 0 30.11C-9.91 30.11 -10.53 4.53 0 0C24.47 -10.53 70 -7.21 70 0' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M420 53.85C407.88 53.85 390.83 18.24 390.83 0C390.83 -8.69 405.41 0 420 0C428.75 0 437.5 -6.36 437.5 0C437.5 20.57 431.21 53.85 420 53.85' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M477.44 140C477.44 117.18 522.03 105.38 560 105.38C581 105.38 595.38 120.07 595.38 140C595.38 169.58 584.32 204.4 560 204.4C525.35 204.4 477.44 166.69 477.44 140' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M810.7 140C810.7 108.69 822.85 78.54 840 78.54C858.85 78.54 882.71 108.23 882.71 140C882.71 177.14 858.61 216.36 840 216.36C822.6 216.36 810.7 177.6 810.7 140' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M109.09 280C109.09 255.02 125.45 235.09 140 235.09C153.84 235.09 165.87 255.67 165.87 280C165.87 332.22 154.11 388.18 140 388.18C125.72 388.18 109.09 331.56 109.09 280' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M654.5 280C654.5 265.7 676.54 257.53 700 257.53C731.79 257.53 765 265.11 765 280C765 296.57 730.78 320.44 700 320.44C675.53 320.44 654.5 297.15 654.5 280' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1023.75 280C1023.75 270.61 1072.99 261.88 1120 261.88C1140.86 261.88 1159.49 270.66 1159.49 280C1159.49 289.47 1141.01 299.49 1120 299.49C1073.14 299.49 1023.75 289.42 1023.75 280' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1513.33 280C1526.43 273.43 1530.58 267.83 1540 267.83C1543.91 267.83 1540 273.91 1540 280C1540 350 1540 350 1540 420C1540 490 1544.37 494.37 1540 560C1539.71 564.37 1534.57 562.48 1530.67 560C1464.57 517.94 1464.38 516.77 1400 470.91C1366.11 446.77 1334.12 449.36 1334.12 420C1334.12 382.93 1359.47 369.71 1400 338.05C1449.08 299.71 1456.43 308.54 1513.33 280' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M406.23 420C406.23 410.75 410.69 408.45 420 406C487.57 388.19 496.28 374.4 560 379.47C584.19 381.4 595.81 401.83 595.81 420C595.81 434.72 579.31 435 560 445.25C491.4 481.67 467.87 521.19 420 513.33C390.99 508.57 406.23 464.42 406.23 420' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M911.49 420C911.49 364.95 952.64 305 980 305C1004.59 305 1015.38 363.36 1015.38 420C1015.38 463.23 1003.76 504.74 980 504.74C951.81 504.74 911.49 464.82 911.49 420' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M0 517.29C9.12 517.29 32.73 546.72 32.73 560C32.73 568.08 7.1 569.26 0 560C-9.26 547.91 -7.24 517.29 0 517.29' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3cpath d='M240.73 560C240.73 547.78 255.22 518.72 280 518.72C336.78 518.72 403.85 549.41 403.85 560C403.85 570.05 341.92 560 280 560C260.37 560 240.73 568.42 240.73 560' stroke='rgba(69%2c 69%2c 69%2c 0.42)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+
+#forex {
+  display: none;
+}
+
+.faq .wrapper {
+  text-align: left;
+}
+
+.faq h2 {
+  font-size: 4rem;
+  color: #d8d8d8;
+  font-weight: 800;
+
+  text-shadow: 2px 4px 20px #11111131;
+  margin-bottom: 5rem;
+}
+
+.faq h2 span {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.faq summary {
+  background-color: #242424;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #d8d8d894;
+  box-shadow: 2px 4px 30px #1b1b1b;
+
+  color: #d8d8d8;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq details summary:hover {
+  cursor: pointer;
+}
+
+.faq details summary svg {
+  transition: all 100ms ease-in-out;
+}
+
+.faq details[open] summary svg {
+  transform: rotate(90deg);
+}
+
+details>summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none
+}
+
+.faq details p {
+  /* From https://css.glass */
+  background: rgba(41, 41, 41, 0.61);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.7px);
+  -webkit-backdrop-filter: blur(2.7px);
+  padding: 2rem;
+
+  border: 1px solid #d8d8d894;
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+
+  color: #d8d8d8;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+details[open] summary {
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: none;
+}
+
+details[open] summary ~ * {
+  animation: swep 300ms ease-in-out;
+}
+
+@keyframes swep {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.faq .details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* footer =================== */
+#footer {
+  background-color: #111111;
+  padding: 3rem;
+}
+
+#footer img {
+  max-width: 20%;
+}
+ 
+#footer p {
+  font-weight: 600;
+  color: #d8d8d8;
+  margin-bottom: 1rem;
+}
+
+#footer p a {
+  background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#footer p a:hover {
+  cursor: pointer;
+}
+/* buttonWhatsapp =================== */
+#buttonWhatsapp {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: all 300ms ease-in-out;
+}
+
+#buttonWhatsapp.show {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+#buttonWhatsapp svg {
+  width: 6rem;
+  transition: all 300ms ease-in-out;
+}
+
+#buttonWhatsapp svg:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: min(76.8rem, 100%);
+  }
+
+  section#more .wrapper img {
+    display: none;
+  }
+}
+
+@media (min-width: 1300px) {
+  header#home {
+    height: 60vh;
+  }
+
+  header#home .content h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .wrapper {
+    width: min(108rem, 100%);
+  }
+
+  header#home {
+    height: 55vh;
+  }
+
+  header#home .wrapper .box {
+    margin-top: -1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    row-gap: 5rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  header#home .content {
+    text-align: start;
+  }
+
+  header#home button {
+    display: none;
+  }
+
+  header#home .box img {
+    width: initial;
+  }
+
+  header#home .content h1 {
+    font-size: 4.5rem;
+  }
+
+  section#more .wrapper .cards {
+    flex-direction: row;
+    max-width: initial;
+  }
+
+  section#more .wrapper .cards .card {
+    width: 33%;
+    min-height: 30rem;
+  }
+
+  section#more .wrapper .cards svg {
+    transform: rotate(-90deg);
+  }
+
+  section.planos.desktop {
+    display: inherit;
+  }
+
+  section.planos.mobile {
+    display: none;
+  }
+
+  section.planos.desktop .swiper-slide {
+    min-height: 40rem;
+    justify-content: space-around;
+    padding: 4rem;
+  }
+
+  section.planos.desktop .mySwiperDesktop {
+    padding-inline: 5rem;
+  }
+
+  section.planos.desktop .mySwiperDesktop .swiper-button-next ,
+  section.planos.desktop .mySwiperDesktop .swiper-button-prev {
+    transform: scale(2);
+    transition: all 200ms ease-in-out;
+  }
+
+  section.planos.desktop .mySwiperDesktop .swiper-button-next:hover,
+  section.planos.desktop .mySwiperDesktop .swiper-button-prev:hover {
+    transform: scale(2.5);
+  }
+
+  section#planosb3 {
+    display: none;
+  }
+
+  section#planosb3Desktop {
+    display: inherit;
+  }
+
+  #planosb3Desktop .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+  #planosb3Desktop .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40rem;
+    padding: 4rem;
+    border-radius: 3rem;
+    gap: 3rem;
+
+  }
+
+  #planosb3Desktop .cards h3 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #d8d8d8;
+  }
+
+  #planosb3Desktop .cards p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #d8d8d8;
+  }
+  
+  #planosb3Desktop .cards span {
+    font-weight: 700;
+  }
+
+  #planosb3Desktop .cards a button {
+    margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  border: none;
+  box-shadow: 4px 8px 20px #000000;
+  }
+
+  #planosb3Desktop {
+    background-color: #111111;
+  }
+  
+  #planosb3Desktop h2 {
+    font-size: 4rem;
+    color: #d8d8d8;
+    font-weight: 800;
+  
+    text-shadow: 2px 4px 20px #11111131;
+    margin-bottom: 5rem;
+  }
+  
+  #planosb3Desktop h2 span {
+    background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  }
+  
+  #planosb3Desktop .card.one {
+    background: rgb(48,241,255);
+    background: linear-gradient(319deg, rgba(48,241,255,1) 0%, rgba(0,0,0,0.8015581232492998) 25%, rgba(0,0,0,0.8) 75%, rgba(48,241,255,1) 100%);
+    box-shadow: 0px 0px 20px 1px rgba(48,241,255,1)  inset;
+  }
+  
+  #planosb3Desktop .card.one span {
+    background: #30F1FF;
+    background: linear-gradient(to right, #30F1FF 0%, #38FFF2 33%, #21BECF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #planosb3Desktop .card.one a button {
+    background: linear-gradient(to right, #30F1FF 0%, #38FFF2 33%, #21BECF 100%);
+  }
+  
+  #planosb3Desktop .card.two {
+    background: rgb(112,255,155);
+    background: linear-gradient(319deg, rgba(112,255,155,1) 0%, rgba(0,0,0,0.8015581232492998) 25%, rgba(0,0,0,0.8) 75%, rgba(112,255,155,1) 100%);
+    box-shadow: 0px 0px 20px 1px rgba(112,255,155,1) inset;
+  }
+  
+  #planosb3Desktop .card.two span {
+    background: #70FF9B;
+    background: linear-gradient(to right, #70FF9B 0%, #54FF76 33%, #46CF78 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #planosb3Desktop .card.two a button {
+    background: linear-gradient(to right, #70FF9B 0%, #54FF76 33%, #46CF78 100%);
+  }
+
+  section#more {
+    margin-top: -3rem;
+  }
+
+  section#benefit .cards .card {
+    min-height: 40rem;
+  }
+
+}
+
+@keyframes move {
+  50% {
+   transform: translateY(-8px);
+  }
+}
+
+@keyframes moveArrowX {
+  50% {
+   transform: translateX(-8px);
+  }
+}
+
+@keyframes moveArrowY {
+  50% {
+   transform: translateY(-8px);
+  }
+}
+ 

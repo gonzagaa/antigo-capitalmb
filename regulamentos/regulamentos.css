@@ -1,0 +1,123 @@
+nav {
+    backdrop-filter: blur(10px) saturate(100%);
+    -webkit-backdrop-filter: blur(10px) saturate(100%);
+    background-color: rgba(0, 0, 0, 0.700);
+  }
+
+body {
+    height: 100%;
+    background-image: url(../assets/background\ more.jpg);
+    background-size: cover;
+}
+
+#regulamentos h2,
+#pdf h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #d8d8d8;
+
+    margin-bottom: 2rem;
+}
+
+#regulamentos h2 span,
+#pdf h2 span {
+    background: #004BFE;
+background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#regulamentos .content header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#regulamentos .content header p {
+    color: #d8d8d8;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+#regulamentos .content .geral {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align: left;
+    gap: 4rem;
+}
+
+#regulamentos .content .geral .regulamento h3 {
+    font-weight: 800;
+    background: #004BFE;
+    background: linear-gradient(to right, #004BFE 0%, #0000F2 50%, #0000D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+#regulamentos .content .geral .regulamento ul {
+    font-weight: 400;
+    color: #d8d8d8;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: start;
+}
+
+#regulamentos .content .geral .regulamento ul li {
+    list-style: circle;
+}
+
+#regulamentos .content .geral .regulamento .table {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+#regulamentos .content .geral .regulamento table {
+    border-collapse: collapse;
+    
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#regulamentos .content .geral .regulamento table td {
+    font-weight: 300;
+}
+
+#regulamentos .content .geral .regulamento table td,
+#regulamentos .content .geral .regulamento table th {
+    padding: 1rem;
+    border: 1px solid #d8d8d8;
+    color: #d8d8d8;
+    background-color: #111111;
+}
+
+#regulamentos .content .geral a button {
+    background-color: #0000D4;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: #d8d8d8;
+    font-weight: 800;
+
+    transition: all 200ms ease-in-out;
+}
+
+#regulamentos .content .geral a button:hover {
+    background-color: #004BFE;
+    cursor: pointer;
+}
+
+
+@media (min-width: 1080px) {
+    section#regulamentos .wrapper .content header p {
+        max-width: 60%;
+    }
+}
